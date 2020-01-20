@@ -1,0 +1,59 @@
+// overflow:hiddenするとstickeyは動かない
+.wrapper{
+    height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    .sticky{
+        // border: 1px solid;
+        // width: 100px;
+
+        .skill-size{
+            font-size: 30px;
+        }
+        .skill-pic{
+            height: 80px;
+            width: 100%;
+        }
+        .skill-everything{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.wrapper-res{
+    display: none!important;
+}
+
+
+@media screen and(max-width:896px){
+    .wrapper{
+        display: none!important;
+    }
+    .wrapper-res{
+        display: block!important;
+        .skill-size-res{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 60px;
+        }
+        .sticky-res{
+            .skill-everything-res{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .part-of-languege{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .skill-pic-res{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

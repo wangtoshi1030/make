@@ -1,0 +1,105 @@
+// header始まり
+
+@mixin name() {
+    font-size: 30px;
+}
+
+
+@mixin header(){
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+@mixin list() {
+    display: flex;
+}
+
+@mixin li() {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+@mixin a() {
+    text-decoration: none;
+    color: black;
+}
+
+@mixin li-hover() {
+    border-bottom: 2px solid black;
+}
+
+
+
+// header終わり
+
+
+
+
+
+
+//footer始まり
+
+@mixin footer() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 100px;
+}
+
+
+
+
+@mixin hos() {
+    color: white;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+@mixin arrow() {
+    color: white;
+    margin-right: 30px;
+    font-size: 30px;
+}
+
+@mixin arrow-hover() {
+    color: rgb(89, 86, 86);
+}
+
+
+// footer終わり
+
+
+
+
+// php-main始まり
+@mixin bgPos {
+    background-image: url(../../img-php/十人十色.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin strings {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 35%;
+    padding: 30px;
+    filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.6));
+    cursor: pointer;
+    transition: 1s;
+}
+
+@mixin changeText {
+    color: white;
+    background-color: black;
+    box-shadow: 3px 3px gray, -1em 0 .4em rgb(237, 237, 234);
+    transition: 1s;
+}

@@ -1,0 +1,122 @@
+// header始まり
+.name{
+    @include name();
+}
+.summary-header{
+    @include header();
+    .list{
+        @include list();
+        .li{
+            @include li();
+            a{
+                @include a();
+            }
+        }
+        li:hover{
+            @include li-hover();
+        }
+    }
+    .block{
+        display: none !important;
+        .res{
+            .res-pos{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .btn{
+                    transition: 0.5s;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                    p{
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// header終わり
+
+
+// container始まり
+.container{
+    // overflow: hidden;
+    // overflow: auto;
+    .pic-size{
+        height: 100vh;
+        width: 100%;
+    }
+    .item{
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Pacifico', cursive;
+        margin-bottom: 100px;
+    }
+}
+
+// container終わり
+
+
+
+
+// レスポンシブ対応
+// header
+
+
+
+
+
+@media screen and (max-width:560px){
+    .summary-header{
+        .name{
+            font-size: 20px;
+        }
+        .list{
+            .li{
+                display: none;
+            }
+        }
+        .block{
+            display: block !important;
+            .res{
+                .res-pos{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .btn{
+                        border-radius: 50%;
+                        border: 1px solid black;
+                        p{
+                            padding: 10px;
+                        }
+                    }
+                    .btn:hover{
+                        background-color: black;
+                        color: white;
+                        transition: 0.5s;
+                        box-shadow: 2px 2px 2px 2px gray;
+                    }
+                    .res-li{
+                        padding-bottom: 5px;
+                        padding-top: 5px;
+                        display: none;
+                        a{
+                            text-decoration: none;
+                            color: black;
+                        }
+                        a:hover{
+                            font-weight: bold;
+                            border-bottom: 1px solid red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
